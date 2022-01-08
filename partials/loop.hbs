@@ -1,11 +1,14 @@
 <article class="feed {{post_class}}" data-month="{{date format="MMMM YYYY"}}">
     <div class="feed-calendar">
-        <div class="feed-calendar-month">
+        <time datetime="{{date format="YYYY-MM-DD"}}">
+            {{date published_at}}
+        </time>        
+        {{!-- <div class="feed-calendar-month">
             {{date published_at format="MMM"}}
         </div>
         <div class="feed-calendar-day">
             {{date published_at format="DD"}}
-        </div>
+        </div> --}}
     </div>
     {{#match @custom.feed_layout "!=" "Text-only"}}
         {{#match @custom.feed_layout "!=" "Minimal"}}

@@ -260,12 +260,19 @@
 /* Post feed image only */
 
 .post-feed.post-feed--img-only:not(.text-only) .post {
-    padding-bottom: 3.5rem;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
 }
 
-.post-feed--img-only .feed-calendar,
 .post-feed--img-only .feed-wrapper {
     display: none;
+}
+
+.post-feed--img-only .feed-calendar {
+    display: flex !important;
+    margin-bottom: 0.4rem;
+    margin-right: 0;
 }
 
 .post-feed--img-only .feed-image {
@@ -284,6 +291,10 @@
     width: 100%;
     height: auto;
     object-fit: contain;    
+}
+
+.post-feed--img-only .feed + .feed {
+    border-top: 1px solid var(--light-gray-color) !important;
 }
 
 @media (max-width: 575px) {
@@ -306,6 +317,7 @@
     }
 
     .post-feed.post-feed--img-only:not(.text-only) .post {
-        padding-bottom: 2.5rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
     }
 }

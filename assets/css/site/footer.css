@@ -31,7 +31,7 @@
     align-items: center;
     margin: 0;
     color: var(--secondary-text-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
@@ -50,6 +50,8 @@
 .social {
     display: flex;
     align-items: center;
+
+    display: none;
 }
 
 .social-item {

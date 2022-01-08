@@ -263,6 +263,7 @@
     flex-direction: column;
     padding-bottom: 3rem;
     padding-top: 3rem;
+    align-items: center;
 }
 
 .post-feed--img-only .feed-wrapper {
@@ -272,8 +273,7 @@
 .post-feed--img-only .feed-calendar {
     display: flex !important;
     color: #a4a6ad;
-    margin-bottom: 0.4rem;
-    margin-right: 0;
+    margin: 0 auto 0.4rem;
 }
 
 .post-feed--img-only .feed-image {

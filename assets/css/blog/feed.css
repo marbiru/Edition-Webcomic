@@ -271,6 +271,7 @@
 
 .post-feed--img-only .feed-calendar {
     display: flex !important;
+    color: #a4a6ad;
     margin-bottom: 0.4rem;
     margin-right: 0;
 }

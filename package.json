@@ -93,7 +93,7 @@
                     "Text-only",
                     "Minimal"
                 ],
-                "default": "Text-only",
+                "default": "Expanded",
                 "group": "homepage"
             },
             "show_share_links": {

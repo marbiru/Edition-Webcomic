@@ -4,12 +4,12 @@
     <main class="site-main">
         {{#post}}
             {{> content width="wide"}}
+            {{> comment}}
         {{/post}}
         {{#is "post"}}
             {{#if @custom.show_related_posts}}
                 {{> related}}
             {{/if}}
-            {{> comment}}
         {{/is}}
     </main>
 </div>

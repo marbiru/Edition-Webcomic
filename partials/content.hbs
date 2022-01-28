@@ -28,14 +28,46 @@
             </div>
         {{/if}}
 
+        {{!-- Use feature_image for mobile screens --}}
         {{#if feature_image}}
             {{#unless no_image}}
-                <figure class="single-media kg-width-{{width}}">
+                <figure class="single-media kg-width-{{width}} u-mobile-only">
                     <img srcset="{{> srcset}}" sizes="(min-width: 1023px) 920px, calc(90vw)" src="{{img_url feature_image size="l"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
                     {{#if feature_image_caption}}
                         <figcaption>{{feature_image_caption}}</figcaption>
                     {{/if}}
                 </figure>
+            {{/unless}}
+        {{/if}}
+
+        {{!-- Use og_image or twitter_image for tablet & desktop screens --}}
+        {{#if og_image}}
+            {{#unless no_image}}
+                <figure class="single-media kg-width-{{width}} u-tablet-up">
+                    <img 
+                        srcset="{{> srcset feature_image=og_image }}" 
+                        sizes="(min-width: 1023px) 920px, calc(90vw)" 
+                        src="{{img_url og_image size="l"}}" 
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" 
+                    />
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+            {{/unless}}        
+        {{else if twitter_image}}
+            {{#unless no_image}}
+                <figure class="single-media kg-width-{{width}} u-tablet-up">
+                    <img 
+                        srcset="{{> srcset feature_image=twitter_image }}" 
+                        sizes="(min-width: 1023px) 920px, calc(90vw)" 
+                        src="{{img_url twitter_image size="l"}}" 
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" 
+                    />
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>    
             {{/unless}}
         {{/if}}
     </header>
